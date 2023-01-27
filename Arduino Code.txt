@@ -1,0 +1,123 @@
+int I0 = 2;
+int I1 = 3;
+int I2 = 4;
+int I3 = 5;
+int O0 = 10;
+int O1 = 11;
+int O2 = 12;
+int O3 = 13;
+// the setup function runs once when you press reset or power the board
+void setup() {
+// initialize digital pin LED_BUILTIN as an output.
+pinMode(I0, INPUT);
+pinMode(I1, INPUT);
+pinMode(I2, INPUT);
+pinMode(I3, INPUT);
+pinMode(O0, OUTPUT);
+pinMode(O1, OUTPUT);
+pinMode(O2, OUTPUT);
+pinMode(O3, OUTPUT);
+}
+// the loop function runs over and over again forever
+void loop() {
+boolean I0State = digitalRead(I0);
+boolean I1State = digitalRead(I1);
+boolean I2State = digitalRead(I2);
+boolean I3State = digitalRead(I3);
+if(digitalRead(I0)==0 && digitalRead(I1)==0 && digitalRead(I2)==0 && digitalRead(I3)==0){
+digitalWrite(O0, LOW);
+digitalWrite(O1, LOW);
+digitalWrite(O2, HIGH);
+digitalWrite(O3, HIGH);
+}
+if(digitalRead(I0)==0 && digitalRead(I1)==0 && digitalRead(I2)==0 && digitalRead(I3)==1){
+digitalWrite(O0, HIGH);
+digitalWrite(O1, LOW);
+digitalWrite(O2, HIGH);
+digitalWrite(O3, HIGH);
+}
+if(digitalRead(I0)==0 && digitalRead(I1)==0 && digitalRead(I2)==1 && digitalRead(I3)==0){
+digitalWrite(O0, LOW);
+digitalWrite(O1, HIGH);
+digitalWrite(O2, HIGH);
+digitalWrite(O3, LOW);
+}
+if(digitalRead(I0)==0 && digitalRead(I1)==0 && digitalRead(I2)==1 && digitalRead(I3)==1){
+digitalWrite(O0, LOW);
+digitalWrite(O1, LOW);
+digitalWrite(O2, HIGH);
+digitalWrite(O3, HIGH);
+}
+if(digitalRead(I0)==0 && digitalRead(I1)==1 && digitalRead(I2)==0 && digitalRead(I3)==0){
+digitalWrite(O0, HIGH);
+digitalWrite(O1, HIGH);
+digitalWrite(O2, LOW);
+digitalWrite(O3, HIGH);
+}
+if(digitalRead(I0)==0 && digitalRead(I1)==1 && digitalRead(I2)==0 && digitalRead(I3)==1){
+digitalWrite(O0, LOW);
+digitalWrite(O1, HIGH);
+digitalWrite(O2, LOW);
+digitalWrite(O3, HIGH);
+}
+if(digitalRead(I0)==0 && digitalRead(I1)==1 && digitalRead(I2)==1 && digitalRead(I3)==0){
+digitalWrite(O0, HIGH);
+digitalWrite(O1, HIGH);
+digitalWrite(O2, LOW);
+digitalWrite(O3, HIGH);
+}
+if(digitalRead(I0)==0 && digitalRead(I1)==1 && digitalRead(I2)==1 && digitalRead(I3)==1){
+digitalWrite(O0, LOW);
+digitalWrite(O1, LOW);
+digitalWrite(O2, LOW);
+digitalWrite(O3, LOW);
+}
+if(digitalRead(I0)==1 && digitalRead(I1)==0 && digitalRead(I2)==0 && digitalRead(I3)==0){
+digitalWrite(O0, HIGH);
+digitalWrite(O1, LOW);
+digitalWrite(O2, LOW);
+digitalWrite(O3, LOW);
+}
+if(digitalRead(I0)==1 && digitalRead(I1)==0 && digitalRead(I2)==0 && digitalRead(I3)==1){
+digitalWrite(O0, HIGH);
+digitalWrite(O1, HIGH);
+digitalWrite(O2, LOW);
+digitalWrite(O3, LOW);
+}
+if(digitalRead(I0)==1 && digitalRead(I1)==0 && digitalRead(I2)==1 && digitalRead(I3)==0){
+digitalWrite(O0, LOW);
+digitalWrite(O1, HIGH);
+digitalWrite(O2, LOW);
+digitalWrite(O3, HIGH);
+}
+if(digitalRead(I0)==1 && digitalRead(I1)==0 && digitalRead(I2)==1 && digitalRead(I3)==1){
+digitalWrite(O0, LOW);
+digitalWrite(O1, HIGH);
+digitalWrite(O2, HIGH);
+digitalWrite(O3, HIGH);
+}
+if(digitalRead(I0)==1 && digitalRead(I1)==1 && digitalRead(I2)==0 && digitalRead(I3)==0){
+digitalWrite(O0, LOW);
+digitalWrite(O1, LOW);
+digitalWrite(O2, HIGH);
+digitalWrite(O3, LOW);
+}
+if(digitalRead(I0)==1 && digitalRead(I1)==1 && digitalRead(I2)==0 && digitalRead(I3)==1){
+digitalWrite(O0, LOW);
+digitalWrite(O1, LOW);
+digitalWrite(O2, HIGH);
+digitalWrite(O3, HIGH);
+}
+if(digitalRead(I0)==1 && digitalRead(I1)==1 && digitalRead(I2)==1 && digitalRead(I3)==0){
+digitalWrite(O0, LOW);
+digitalWrite(O1, HIGH);
+digitalWrite(O2, HIGH);
+digitalWrite(O3, HIGH);
+}
+if(digitalRead(I0)==1 && digitalRead(I1)==1 && digitalRead(I2)==1 && digitalRead(I3)==1){
+digitalWrite(O0, LOW);
+digitalWrite(O1, LOW);
+digitalWrite(O2, HIGH);
+digitalWrite(O3, HIGH);
+}
+}
